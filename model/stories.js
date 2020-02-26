@@ -21,7 +21,7 @@ const ocMonster = (user) => {
     return {
         characters: chars,
         genre: "Overcome The Monster",
-        plot: `${chars[0]} finds a mysterious artifact that he keeps as home. However, all is not what it seems as there is a secret entity hidden inside that hopes to get out. Now ${chars[1]} and his friend  try to figure out a way to stop this thing from getting out.`
+        plot: `${chars[0]} finds a mysterious artifact that he keeps as home. However, all is not what it seems as there is a secret entity hidden inside that hopes to get out. Now ${chars[0]} and friend ${chars[1]} try to figure out a way to stop this thing from getting out.`
     }
 }
 
@@ -34,6 +34,7 @@ const getStoryPlot = (user) => {
             return ocMonster(user)
             break;
         default:
+            return ocMonster(user)
             break;
     }
 }

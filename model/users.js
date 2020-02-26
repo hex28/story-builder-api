@@ -12,7 +12,7 @@ class User {
         let newId = this.lastId + 1
         this.users[newId] = {
             characters: [],
-            plot: null
+            plot: ""
         }
         this.lastId = newId
         return newId

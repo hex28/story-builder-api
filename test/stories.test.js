@@ -10,8 +10,14 @@ describe("User", () => {
         user.addCharacter(newId, "Ben");
         user.setPlot(newId, "ocMonster");
 
-        it("should get a new story for ocMonster", ()=>{    
-            expect(stories.getStoryPlot(user.getUser(newId))).toEqual(`Madeline finds a mysterious artifact that he keeps as home. However, all is not what it seems as there is a secret entity hidden inside that hopes to get out. Now Ben and his friend  try to figure out a way to stop this thing from getting out.`)
+        it("should get a new story for ocMonster", ()=>{   
+            console.log(stories.getStoryPlot(user.getUser(newId))) 
+            expect(stories.getStoryPlot(user.getUser(newId))).toEqual({
+                "characters": ["Madeline", "Ben"], 
+                "genre": "Overcome The Monster", 
+                "plot": "Madeline finds a mysterious artifact that he keeps as home. However, all is not what it seems as there is a secret entity hidden inside that hopes to get out. Now Madeline and friend Ben try to figure out a way to stop this thing from getting out."
+                
+            })
         })
     }) 
 })
